@@ -1,40 +1,148 @@
-# \# Shopflo SDET Assignment
+# Shopflo SDET Assignment
 
-# 
+## Overview
 
-# \## Overview
+This repository contains the solution for the SDET assignment, covering both UI and API test automation.
 
-# This repository contains:
+### Assignment Scope
 
-# 
+#### UI Automation
 
-# \- Manual Test Cases
+Target Application: https://www.saucedemo.com/
 
-# \- UI Automation using WDIO + Cucumber + TypeScript
+Coverage:
 
-# \- API Automation Tests
+* Positive Test Scenarios
+* Negative Test Scenarios
+* End-to-End User Flows
+* Login Validation
+* Product Selection
+* Cart Validation
+* Checkout Process
 
-# \- GitHub Actions CI Pipeline
+#### API Automation
 
-# 
+Target API: https://fakestoreapi.com/
 
-# \## Tech Stack
+Coverage:
 
-# 
+* Cart CRUD Operations
+* Authentication Testing
+* Positive Test Scenarios
+* Negative Test Scenarios
+* Response Validation
+* Schema Validation
+* Data-Driven Testing
 
-# \- WebdriverIO (WDIO)
+---
 
-# \- TypeScript
+## Technology Stack
 
-# \- Cucumber
+* Playwright
+* TypeScript
+* Node.js
+* GitHub Actions
 
-# \- Node.js
+---
 
-# 
+## Framework Design
 
-# \## Status
+The framework follows:
 
-# 
+* Page Object Model (POM)
+* Reusable Components
+* Modular Test Design
+* Maintainable Test Structure
 
-# Work In Progress
+---
 
+## Project Structure
+
+```text
+shopflo-sdet-assignment
+
+├── pages
+│   ├── LoginPage.ts
+│   ├── InventoryPage.ts
+│   ├── CartPage.ts
+│   └── CheckoutPage.ts
+│
+├── tests
+│   ├── ui
+│   └── api
+│
+├── test-data
+│
+├── test-cases
+│
+├── .github
+│   └── workflows
+│
+├── playwright.config.ts
+├── package.json
+└── README.md
+```
+
+---
+
+## Installation
+
+```bash
+npm install
+```
+
+---
+
+## Execute Tests
+
+Run all tests:
+
+```bash
+npx playwright test
+```
+
+Run UI tests:
+
+```bash
+npx playwright test tests/ui
+```
+
+Run API tests:
+
+```bash
+npx playwright test tests/api
+```
+
+---
+
+## Reporting
+
+Playwright HTML Reports are generated after execution.
+
+Open the report using:
+
+```bash
+npx playwright show-report
+```
+
+---
+
+## Continuous Integration
+
+GitHub Actions is configured to execute automated tests on every push.
+
+---
+
+## Future Enhancements
+
+* Cross-browser execution
+* Parallel execution
+* Environment-specific configuration
+* Advanced reporting and dashboards
+* Test data management improvements
+
+---
+
+## Author
+
+Dolly Priyanka
