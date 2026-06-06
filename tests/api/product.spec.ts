@@ -9,8 +9,7 @@ for (const productId of productIds) {
     const response = await request.get(
       `https://fakestoreapi.com/products/${productId}`
     );
-    console.log('Status:', response.status());
-    console.log('Response:', await response.text());
+    
     expect(response.status()).toBe(200);
 
     const body = await response.json();
